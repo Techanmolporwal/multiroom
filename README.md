@@ -24,3 +24,9 @@ This is full stack web application made with vanilla javascript in this you can 
 * mongodb
 
 # Features
+* First user can signUp
+* Then user can login with it email and password
+* Then user can scroll the upcoming event for games and movies
+* Then user can create or join the room with link 
+* Then user can chat with its friends 
+* Play music send photos and files
