@@ -1,0 +1,47 @@
+<%- include("header") -%>
+  <section id="over">
+    <div id="log-left">
+      <div id="log-sign-bot">
+        <img id="logoimg-log" src="/images/bearwhite.png">
+        <a id="sign-log-a" href="">SignUp</a>
+        <div id="lin-gid">
+        </div>
+      </div>
+      <div id="center-log-para">
+        <p id="wel-text">Welcome,</p>
+        <p id="wel-text-top">Login to Enter The Room of</p>
+        <p id="wel-text-bot">joy and happines.</p>
+      </div>
+    </div>
+    <div id="log-right">
+      <form method="get" action="/chatmain" id="form-log">
+        <div class="mb-3" id="top-inp">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" name="logemail" id="log-email" placeholder="Email/Username"
+            aria-describedby="emailHelp">
+
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" placeholder="Password" name="logpass" id="log-pass">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me to enter</label>
+        </div>
+        <button type="submit" id="login-submit" class="btn btn-primary">Login</button>
+        <p id="or">_____________or_____________</p>
+        <div id="div-google">
+          <img id="google-logo" src="/images/googlelogo.png">
+          <p id="google-logo-para">Sign in with Google</p>
+        </div>
+      </form>
+    </div>
+
+  </section>
+  <div id="bot-curve" style="object-fit: cover;">
+<video id="bot-vide" autoplay muted loop><source src="/images/logvideo4.mp4" type="video/mp4"></video>
+  </body>
+  <script src="client/username.js" ></script>
+
+  </html>

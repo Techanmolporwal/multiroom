@@ -1,0 +1,100 @@
+<%- include("header") -%>
+    <div id="con">
+        <div style="display: flex; height: 100%;">
+            <div id="main1" class="col-lg-6">
+                <header id="hed-land">
+                <div id="br-logo">
+                    <img id="img-log" src="/images/whitepng1.png">
+                </div>
+                <div id="login">
+                    <form action="/signup" method="post">
+                        <button type="submit" id="signup" >SignUp</button>
+                        <div id="lin-gid"></div>
+                    </form>
+                    <form action="/login" method="get" id="form-logar">
+                        <button type="submit" id="log">login</button>
+                        <div id="lin-gid"></div>
+                    </form>
+                </div>
+                </header>
+                <div id="text-room-for">
+                    <p id="tp-hov">Rooms For Every Need</p>
+                </div>
+                <div id="pri-pro">
+                    <p>Privacy   Protection</p>
+                </div>
+            </div>
+            <div id="for-right-width">
+                <div id="carou">
+                    <section class="colored-section" id="sec">
+                        <div id="testimonial-carousel" class="carousel slide" data-ride="true">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active  " id="first-cour">
+                                    <div>
+                                        <img id="gaemplya" src="/images/videogameplay.png">
+                                    </div>
+                                    <div id="inner">
+                                        <h2 id="abo">About Us</h2>
+                                        <p id="abo-para">Largest Serving Platform For Virtual <br>Rooms With More Than 300K+<br>
+                                            Happy Users. </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item " id="first-cour">
+                                    <div>
+                                        <img id="lapdespic" src="/images/perosnlap.png">
+                                    </div>
+                                    <div id="inner">
+                                        <h2 id="abo">Contact Us</h2>
+                                        <h4 id="con-email">Email Id:</h4>
+                                        <p id="con-para">MultiRoomVers@gmail.com </p>
+                                        <h4 id="con-email">Phone no. :</h4>
+                                        <p id="con-para">+011 1011765</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item " id="first-cour">
+                                    <img id="musicdespic" src="/images/musicline.png">
+                                    <div id="inner">
+                                        <h2 id="abo">Download</h2>
+                                        <div style="display: flex; margin-top: 20px;">
+                                        <button type="button" id="windbut" class="btn btn-outline-dark btn-lg"><i
+                                                class="fab fa-windows"></i>Windows</button>
+                                        <button type="button" id="macbut" class="btn btn-info  btn-lg"><i
+                                                class="fab fa-apple"></i>Macs</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#testimonial-carousel" role="button"
+                                data-slide="prev">
+                                <i class="fas fa-chevron-left fa-1x"></i>
+                            </a>
+
+                            <a class="carousel-control-next" href="#testimonial-carousel" role="button"
+                                data-slide="next">
+                                <i class="fas fa-chevron-right fa-1x"></i>
+                            </a>
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        let tphov=document.getElementById("tp-hov")
+        console.log(tphov.innerText)
+        tphov.addEventListener("mouseover",()=>{
+            if(tphov.innerText="Room For Every Need"){
+                tphov.innerText="hello, Login To Enter Room "
+            }
+            else{
+                tphov.innerText="Room For Every Need"
+            }
+           
+        })
+       
+
+    </script>
+    <%- include("footer") -%>

@@ -1,0 +1,47 @@
+<%- include("header") -%>
+<section id="sec1">
+
+    <div id="container">
+        <form >
+            <div id="don-home">
+            <button type="button" class="btn btn btn-outline-light rounded-pill">Home</button>
+            <button id="donate" type="button" class="btn btn btn-outline-info rounded-pill">Donate</button>
+        </div>
+        </form>
+        <div id="left"> 
+            <iframe src='https://my.spline.design/girlflowerscopy-7979ebb44032dcdf27a1d88fbba66cb2/' frameborder='0' width='100%' height='100%'></iframe>
+        </div>
+        <div id="right">
+            <p id="fre">START FOR FREE</p>
+           <h1 id="fre-cre">Create new account</h1>
+           <p id="fre-mem">Already A Member?<a id="fre-log"> Log In</a></p>
+           <form method="post" action="/sign-up-form">
+            <div class="mb-3" id="enter-name-div">
+                <label for="exampleInputEmail1" class="form-label" >Enter Name</label>
+                <input minlength="2" type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+                <p id="errpara"><%= contentname %></p>
+            </div>
+            <div class="mb-3" id="user-name-div">
+                <label for="exampleInputEmail1" class="form-label" id="lab-username">User Name</label>
+                <input minlength="2" type="text" class="form-control" name="userName" id="userName" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <%  var contentpass=" We'll never share your email with anyone else."%>
+              <div id="emailHelp"  class="form-text"><%= contentpass %></div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Create Password</label>
+              <input type="password" minlength="3" class="form-control" name="password" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" name="checkbox" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+    </div>
+</section>
+<%- include("footer") -%>

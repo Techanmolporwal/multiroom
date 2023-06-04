@@ -1,0 +1,116 @@
+<%- include("header") -%>
+    <section
+        style="background: rgb(2,0,36);
+        background: linear-gradient(105deg, rgba(2,0,36,1) 0%, rgba(182,102,137,1) 74%, rgba(0,212,255,1) 100%); height: 100%; background-size: cover;">
+        <h1 id="checkroomusername" style="display: none;">
+            <%= frontroomname %>
+        </h1>
+        <h1 id="nameforroomtry" style="display: none;">
+            <%= nameforRoom %>
+        </h1>
+        <div id="pta-ni">
+            <h3 id="headroomanemeexist">
+                <%= ExistingRoomName %>
+            </h3>
+        </div>
+        <section id="dis-inl">
+            <div style="display: flex;">
+                <div id="random-music" class="hide">
+                    <h4 id="lat-album">Latest Albums <i  class="fab fa-soundcloud fa-2x"></i></h4>
+                    <div id="misi-div">
+                        Song:TrackL<br>
+                        <div style="font-size: 10px; color: #116466;">
+                        Singer:Drake<br>
+                        Sponcer:Sony
+                        </div>
+                        <audio id="audion" controls>
+                            <source src="music/music1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div id="misi-div">
+                        Song:Electric Star<br>
+                        <div style="font-size: 10px; color: #116466;">
+                        Singer:Bell Board<br>
+                        Sponcer:Trackstar
+                        </div>
+                        <audio id="audion" controls>
+                            <source src="music/music2.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div id="misi-div">
+                        Song:Soory,We are open<br>
+                        <div style="font-size: 10px; color: #116466;">
+                        Singer:Nabucco<br>
+                        Sponcer:Bllon
+                        </div>
+                        <audio id="audion" controls>
+                            <source src="music/music3.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+                <div id="toogle">
+                    <i id="totoogle" class="fas fa-bars fa-2x"></i>
+                </div>
+            </div>
+            <div id="for-sec">
+                <div class="user-join-name">
+                    <h5 id="active-hed">Active Members <img
+                            src="https://img.icons8.com/external-victoruler-linear-colour-victoruler/64/000000/external-person-logistics-victoruler-linear-colour-victoruler.png" />
+                    </h5>
+                    <div class="lower-act">
+                        <div class="first-active"><img class="first-act-logo"
+                                src="https://img.icons8.com/emoji/48/000000/person-mechanic.png" />
+                            <p>You</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="div-try-miv">
+                    <button type="button" onclick="copyToClipboard('#p1')"  id="but-log-mic"  class="btn  btn-lg rounded-pill">
+                        <p id="bina-baat-div"> Copy Room Link</p><i class="fas fa-copy "></i>
+                    </button>
+                </div>
+            </div>
+            <div id="sec-game">
+                <div class="chat-frame">
+                    <div style="display: flex;" class="sec-active"><img class="sec-act-logo"
+                            src="https://img.icons8.com/emoji/48/000000/person-mechanic.png" />
+                        <%= frontroomname %>
+
+                            <img id="start-camera" src="https://img.icons8.com/color/48/000000/camera.png" />
+                            <i id="click-photo" class="far fa-dot-circle fa-2x"></i>
+                            <input id="hiddenfilet" hidden type="file">
+                            <img id="img-chat" src="https://img.icons8.com/color-glass/48/000000/video.png" />
+                    </div>
+                    <div class="wella-pad" id="wella-pad">
+                        <video id="video" style="display:none;" width="220" height="220" autoplay></video>
+                        <canvas id="canvas" style="display: none;" width="220" height="220"></canvas>
+                        <div class="chat-right">hello </div>
+                        <div class="chat-left">hii, man what's up</div>
+                    </div>
+                </div>
+                <form id="send-container" action="#">
+                    <div class="input-group mb-3" id="chat-inp">
+                        <input id="input-cl" type="text" name="messageInp" class="form-control rounded-pill"
+                            placeholder="Messege" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary rounded-pill" type="submit" id="button-addon2"><i
+                                class="fas fa-paper-plane"></i>Send</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+    </section>
+    </body>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="client/client2.js"></script>
+    <script>
+        function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+      }
+    </script>
+    </html>

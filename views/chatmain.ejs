@@ -1,0 +1,194 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <section id="chat-main-body">
+        <header id="chat-main-hed">
+            <img id="chat-main-logo" src="/images/bearwhite2.png">
+            <div id="grou-colo"></div>
+            <div id="chat-main-bord-color">
+                <a id="home-acc">Home</a>
+            </div>
+            <form class="d-flex">
+                <input id="search-inp" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="search-chat" class="btn btn-outline-success" type="submit">
+                    <p id="search-but-para">Search</p>
+                </button>
+            </form>
+        </header>
+        <section id="just-for-scroll">
+            <h1 style="display: none;" id="loguserfro">
+                <%= loguserfro %>
+            </h1>
+            <div id="chat-main-flex">
+                <div id="chat-main-left">
+                    <div id="room-join-head">
+                        Search/Join Room
+                        <img src="https://img.icons8.com/color-glass/48/000000/room.png" />
+                    </div>
+                    <div id="scroll-room-search">
+                        <div class="input-group">
+                            <form method="get" action="/createroom" style="display: flex;">
+                                <input name="trymail" style="display: none;" value='<%= loguserfro %>' type="text"
+                                    class="form-control" placeholder="<%= loguserfro %>"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <input  name="createdRoomName" type="text" id="inpcrro"  class="form-control"
+                                    aria-label="Recipient's username" placeholder="Create Room" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button type="submit"  class="btn btn-outline-secondary">+</button>
+                            </form>
+                        </div>
+                        <form method="get" action="/direct">
+                            <div class="input-group mb-3">
+                                <input name="trymail" style="display: none;" value='<%= loguserfro %>' type="text"
+                                    class="form-control" placeholder="<%= loguserfro %>"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <input id="inpcrro" type="text" name="link" class="form-control" placeholder="Paste Room Link"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="submit">+</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="gameroom-card">
+                        <div style="display: flex; margin-top: 5px;"> <i class="fab fa-playstation fa-2x"></i>
+                            <h5>World Game Room</h5>
+                        </div>
+                        <div id="text-game-room-card">
+                            <p id="room-for-text">Room For Every Gamers</p>
+                            <p id="sponsered-text">Sponsored By playstation <a
+                                    href="https://www.playstation.com/en-in/ps5/?emcid=pa-co-422254&gclid=Cj0KCQiAnaeNBhCUARIsABEee8VRP4loFr58Q-ZxcBeg3Bpb3qM5DCCPmLcUFnODnewI0sef2YYXz5waAj7KEALw_wcB&gclsrc=aw.ds">Check
+                                    Out</a></p>
+                        </div>
+                        <form action="/gameroom" method="get" id="create-new-rom">
+                            <div class="input-group mb-3">
+                                <input name="trymail" style="display: none;" value='<%= loguserfro %>' type="text"
+                                    class="form-control" placeholder="<%= loguserfro %>"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <input style="display: none;" name="WorldGameRoom" value="WorldGameRoom">
+                            </div>
+                            <div>
+                                <button type="submit" id="GamersAda">Join <i
+                                        class="fas fa-hand-point-right "></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="gameroom-card2">
+                        <div style="display: flex; margin-top: 5px;"> <img id="book-join"
+                                src="https://img.icons8.com/external-wanicon-flat-wanicon/64/000000/external-book-library-wanicon-flat-wanicon-1.png" />
+                            <h5>World Reader Room</h5>
+                        </div>
+                        <div id="text-game-room-card">
+                            <p id="room-for-text">Room For Every Reader</p>
+                            <p id="sponsered-text">Sponsored By Hachetted <a
+                                    href="https://www.playstation.com/en-in/ps5/?emcid=pa-co-422254&gclid=Cj0KCQiAnaeNBhCUARIsABEee8VRP4loFr58Q-ZxcBeg3Bpb3qM5DCCPmLcUFnODnewI0sef2YYXz5waAj7KEALw_wcB&gclsrc=aw.ds">Check
+                                    Out</a></p>
+                        </div>
+                        <form action="/bookroom" method="get" id="create-new-rom">
+                            <div class="input-group mb-3">
+                                <input name="trymail" style="display: none;" value='<%= loguserfro %>' type="text"
+                                    class="form-control" placeholder="<%= loguserfro %>"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <input style="display: none;" name="WorldBookRoom" value="WorldBookRoom">
+                            </div>
+                            <div>
+                                <button type="submit" id="GamersAda">Join <i
+                                        class="fas fa-hand-point-right "></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div id="chat-main-right">
+                <div id="head-eve">
+                    <p id="up-head">UPCOMING</p>
+                    <P id="ente-para">EVENTS</P>
+                </div>
+                <div id="chat-main-event-inf">
+                    <div class="card" style="width: 30rem; margin-left: 9%;">
+                        <img class="card-img-top" src="/images/eventyinfo.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4>GAME LAUNCH</h4>
+                            <h6>Platform(s): Xbox Series X, Xbox One<br>
+                                Release date: December 3, 2021</h6>
+                            <p class="card-text">In Chorus, a brand new space-flight combat shooter, you play as Nara
+                                and Forsaken, her sentient starfighter. Taking the genre straight into the
+                                next-generation of consoles, Chorus looks pretty awesome, melding exploration across the
+                                universe with outgunning your enemies in an epic quest to free an oppressed galaxy. </p>
+                            <div style="display: flex;">
+                                <i id="post1li" class="fas fa-heart fa-2x"></i>
+                                <i id="post1dis" class="fas fa-thumbs-down fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 30rem; margin-left: 9%;">
+                        <video class="card-img-top" autoplay muted loop>
+                            <source src="/images/spiderman.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                            <h4>MOVIE LAUNCH</h4>
+                            <h6>Platform(s):THEATER<br>
+                                Release date: December 17, 2021</h6>
+                            <p class="card-text">Spider-Man: No Way Home is an upcoming American superhero film based on
+                                the Marvel Comics character Spider-Man co-produced by Columbia Pictures and Marvel
+                                Studios and distributed by Sony Pictures Releasing. It is the sequel to Spider-Man:
+                                Homecoming (2017) and Spider-Man: Far From Home (2019), and the 27th film in the Marvel
+                                Cinematic Universe (MCU).</p>
+                            <div style="display: flex;">
+                                <i id="post2li" class="fas fa-heart fa-2x"></i>
+                                <i id="post2dis" class="fas fa-thumbs-down fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 30rem; margin-left: 9%;">
+                        <img class="card-img-top" src="/images/dyinglight.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4>GAME LAUNCH</h4>
+                            <h6>Platform(s): PC, PS4, Xbox One<br>
+                                Release date: February 4, 2022</h6>
+                            <p class="card-text">No calendar is complete without a zombie game or two on the horizon,
+                                and Dying Light 2 has a good chance of being the only zombie game you'll need for the
+                                foreseeable future. Techland got off to fantastic start with the original Dying Light in
+                                2015, and its sequel intends to healthily expand those parameters in every regard.</p>
+                            <div style="display: flex;">
+                                <i id="post3li" class="fas fa-heart fa-2x"></i>
+                                <i id="post3dis" class="fas fa-thumbs-down fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </section>
+    </section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js"
+    integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="client/chatmain2.js"></script>
+
+</html>
