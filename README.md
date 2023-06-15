@@ -32,5 +32,7 @@ This is full stack web application made with vanilla javascript in this you can 
 * Play music send photos and files
 
 #commands
+
 -> npm install
+
 -> node app.js
