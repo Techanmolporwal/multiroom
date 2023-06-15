@@ -30,3 +30,7 @@ This is full stack web application made with vanilla javascript in this you can 
 * Then user can create or join the room with link 
 * Then user can chat with its friends 
 * Play music send photos and files
+
+#commands
+-> npm install
+-> node app.js
